@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+  /* Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) */
+
+ 
+:root{
+    --pale-blue:hsl(243, 100%, 93%);
+    --grayish-blue:hsl(229, 7%, 55%);
+    --dark-blue:hsl(228, 56%, 26%);
+    --very-dark-blue:hsl(229, 57%, 11%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url('./images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 14px;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    color: var(--pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+ 
+
+.container{
+    
+    background-color:var(--dark-blue);
+    padding:   2.5em;
+    box-shadow: 2px 2px 0px var(--dark-blue);
+}
+
+.logo{
+    width: 140px;
+    margin-bottom: 1.3em;
+}
+
+.icon-container{
+    display: flex;
+    list-style: none;
+    gap: 1.1em;
+    padding: 0;
+
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1em;
+    border-radius: 0.7rem;
+    background-color: var(--very-dark-blue);
+}
+
+.top{
+    margin-bottom: 1.5em;
+}
+
+.top ,
+.top .container{
+     
+    width: 350px;
+    border-radius: 0.5rem;
+    border-top-right-radius: 7rem;
+
+
+}
+.bottom{
+    width: 350px;
+    text-align: center;
+    position:relative;
+     
+}
+
+.bottom,
+.bottom .container{
+    border-radius: 0.5rem;
+}
+.used-space{
+    margin-bottom: 2em;
+}
+ 
+
+
+.space{
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+}
+
+.left-space{
+    
+    padding: 1em;
+    width: 180px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -20%;
+    height: 70px;
+    left: 25%;
+}
+.left-space >div{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+     
+    
+
+}
+
+.left-space p span{
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.left-space p{
+    color: gray;
+    font-weight: bold;
+}
+
+/* bar */
+.bar-container{
+    position: relative;
+   
+    height: 24px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: hsl(229, 53%, 17%);
+    margin-bottom: 1em;
+}
+
+.bar{
+    
+    border-radius: 50px;
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    display: inline-block;
+    width: 75%;
+    height: 16px;
+     
+    background-image: linear-gradient(hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+    
+}
+
+.circle{
+    right: 3px;
+    top: 3px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 11px;
+    display: inline-block;
+}
+.bottom .container p span{
+    
+    font-weight: bold;
+}
+@media(width > 850px){
+    body{
+        background-color: var(--very-dark-blue);
+        background-image:url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size:100%;
+        background-position:0% 105% ;
+        border: 1px solid red;
+    }
+    .main{
+        width: 850px;
+         
+        /* margin: 0; */
+        display: flex;
+        gap: 2em;
+         
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .logo{
+        width: 120px;
+    }
+    .icon-container{
+        gap: 1em;
+    }
+    .icon{
+        padding: 1em;
+    }
+
+    .top .container{
+        width: 320px;
+    }
+
+    .bottom{
+        width: unset;
+         
+        margin-top: 1.5em;
+
+
+    }
+    .bottom .container{
+        width: 500px;
+        text-align: left;
+         
+    }
+
+    .bottom .container p{
+        margin-bottom: 1em;
+    }
+    .space{
+        margin-bottom: 0;
+    }
+
+    .left-space{
+     
+        top:-25%;
+        right: 8%;
+        left:unset;
+        bottom: unset;
+        border-bottom-right-radius: 0;
+    }
+
+    .left-space::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid #fff;
+        border-top: 10px solid #fff;
+        border-bottom: 10px solid transparent;
+        right: 0;;
+        bottom: -25%;
+      }
+
+     
+}
